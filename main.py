@@ -11,6 +11,12 @@ def info_app(): #system-info app function
     print("Status: Early Development\n")
     desktop()  #return to desktop after showing info
 
+def show_wifi(wifi_status):
+    print("Current WiFi status:")
+    if wifi_status == True:
+        print("WiFi is ON\n")
+    elif wifi_status == False:
+        print("WiFi is OFF\n")
 
 def wifi_stats(wifi_status): #print wifi function ON/OFF feature only for v0.1
     print("WiFi Manager")
@@ -33,14 +39,13 @@ def wifi_stats(wifi_status): #print wifi function ON/OFF feature only for v0.1
 
 def wifi_manager(): #wifi manager function
     print("WiFi Manager\n")
-    print("Current WiFi status:")
-    if wifi_status == True:
-        print("WiFi is ON\n")
-    elif wifi_status == False:
-        print("WiFi is OFF\n")
-    option = input("Do you want to turn WiFi ON or OFF? (on/off): ")
-    wifi_stats(option)
-
+    option = input("Do you want to turn WiFi ON or OFF? (on/off): \nOr check status(1): \n")
+    if option == "on":
+        wifi_status(wifi_status)
+    elif option == "1":
+        show_wifi()
+    else:
+        wifi_manager()
     quit_option = input("Do you want to return to the desktop? (yes/no): \n")
     if quit_option.lower() == "yes":
         desktop()
