@@ -97,7 +97,7 @@ You are free to:
 
 ## 👤 Author
 
-**Akiro**  
+**KuroiBiz (aka Akiro)**  
 Student · Builder · System Thinker  
 
 ---
