@@ -33,6 +33,15 @@ The focus is on understanding **flow, state, structure, and control** through co
 - 🧪 Fully terminal-based (no GUI)
 - Use CTRL + C to stop
 ---
+## ✨ New Features (v0.2)
+
+- 🎨 Improved UX & UI using the `rich` package  
+- 🔁 Better control flow across system apps  
+- 🔐 User password hashing with `bcrypt`  
+- 🗂️ User credentials & info stored locally in `users.json` (not server-based)  
+- 🧠 Enhanced `system-info.app` with detailed runtime data  
+- 🐛 Multiple bugs fixed for better stability  
+- ⏻ Shutdown feature added
 
 ## 📂 Apps Included
 
@@ -51,15 +60,9 @@ The focus is on understanding **flow, state, structure, and control** through co
 
 - **Language:** Python  
 - **Frameworks:** None  
-- **External Packages:** None  
+- **External Packages:** Rich, Bcrypt, OS, Json and Datetime
 
-Only core Python concepts are used:
-- functions  
-- conditionals  
-- loops  
-- state variables  
-- input/output  
-
+Core python and some packages are used.
 ---
 
 ## ⚠️ Important Notes
@@ -76,12 +79,10 @@ Chaos is part of the process.
 ## 🧭 Roadmap
 
 Planned for future versions:
-- Shutdown feature
 - Additional user roles
 - Cleaner control flow
 - Improved state handling
 - More apps (carefully scoped)
-
 ---
 
 ## 📜 License

@@ -1,7 +1,9 @@
 # app.py
-from rich.console import Console
-from rich.panel import Panel
 from datetime import datetime
+import platform
+import os
+from rich.panel import Panel
+from rich.console import Console
 
 console = Console()
 _wifi = False
@@ -20,15 +22,42 @@ def wifi():
     state = "CONNECTED" if _wifi else "DISCONNECTED"
     console.print(f"WiFi: {state}", style="green" if _wifi else "red")
 
+
 def info(user):
     now = datetime.now().strftime("%H:%M • %d %b %Y")
+
+    system_name = "AkiroOS"
+    version = "0.2-beta"
+    kernel = "Akiro Kernel (Simulated)"
+    shell = "AkiroShell • Stable (Not Real yet...)"
+    arch = platform.machine()
+    host_os = platform.system()
+    python_version = platform.python_version()
+    pid = os.getpid()
+
     console.print(
         Panel(
-            f"AkiroOS\nUser: {user}\nTime: {now}\nShell: Stable",
-            title="System",
+            f"""
+[bold cyan]{system_name}[/bold cyan]
+Version: {version}
+
+User: {user}
+Process ID: {pid}
+
+Time: {now}
+
+Kernel: {kernel}
+Shell: {shell}
+Architecture: {arch}
+
+Host OS: {host_os}
+Python: {python_version}
+""".strip(),
+            title="System Information",
             style="magenta"
         )
     )
+
 
 def help():
     console.print(
