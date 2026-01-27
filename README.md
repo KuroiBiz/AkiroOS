@@ -63,6 +63,7 @@ The focus is on understanding **flow, state, structure, and control** through co
 - **External Packages:** Rich, Bcrypt, OS, Json and Datetime
 
 Core python and some packages are used.
+
 ---
 
 ## ⚠️ Important Notes
